@@ -6,7 +6,7 @@ use Encode;
 use Data::Dumper;
 
 $|=1;
-
+my $version=2010112901;
 print "\t\t\tMd5 Web Decrypter
 \t\t\t\tby Xti9er
 ".'-'x75,"\n";
