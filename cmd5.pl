@@ -69,16 +69,6 @@ sub webmd5{
 		$siteno++;
 		my @nsite=split(/\|/,$_);
 		
-=cut
-		print  $siteno%2?"+":"x";
-		my $md5text=rmd5(@nsite);
-		if($md5text){
-			print "\b";
-			return $md5text;
-			last;
-		}
-		else{print "\b";}
-=cut
 		$pm->start and next;
 		my $md5text=rmd5(@nsite);
 		print "$nsite[0] result:[$md5text]\n";
@@ -87,8 +77,6 @@ sub webmd5{
 		
 	}
 	$pm->wait_all_children;
-	
-	
 	
 	sub rmd5{
 		my($domain,$gurl,$Method,$referer,$PostData,$Searchstring1,$Searchstring2,$Enabled)=@_;
